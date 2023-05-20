@@ -7,14 +7,11 @@ class Kneejerk < Formula
   depends_on "python@3.9"
 
   def install
-    system "python3", "-m", "venv", "venv"
-    system "./venv/bin/pip", "install", buildpath
-    bin.install "venv/bin/kneejerk"
+    system "pip3", "install", "."
+    bin.install "kneejerk"
   end
 
-
   test do
-    # Place your test here. Something like...
     assert_match "0.0.1", shell_output("#{bin}/kneejerk --version")
   end
 end
