@@ -5,7 +5,7 @@ class Kneejerk < Formula
   homepage "https://github.com/MillerMedia/Kneejerk"
   url "https://github.com/MillerMedia/Kneejerk/archive/refs/tags/0.0.1.tar.gz"
   version "0.0.1"
-  sha256 "507fec4b595bfedee3993349af31c13d517375bccb2c3db79b6a58af75364bde"
+  sha256 "080c2c41319f514b99ab7d757b4acad6ae58fc5ddbedb81cd42584f240c14fb9"
 
   depends_on "python@3.9"
 
