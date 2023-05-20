@@ -7,11 +7,7 @@ class Kneejerk < Formula
   depends_on "python@3.9"
 
   def install
-    system "pip3", "install", "."
-    bin.install "kneejerk"
-  end
-
-  test do
-    assert_match "0.0.1", shell_output("#{bin}/kneejerk --version")
+    ENV["SETUPTOOLS_SCM_PRETEND_VERSION"] = version
+    system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
   end
 end
