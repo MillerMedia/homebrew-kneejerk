@@ -8,9 +8,10 @@ class Kneejerk < Formula
 
   def install
     system "python3", "-m", "venv", "venv"
-    system "./venv/bin/pip", "install", "."
+    system "./venv/bin/pip", "install", buildpath
     bin.install "venv/bin/kneejerk"
   end
+
 
   test do
     # Place your test here. Something like...
