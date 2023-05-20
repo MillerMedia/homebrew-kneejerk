@@ -2,7 +2,7 @@ class Kneejerk < Formula
   desc "A tool for scanning environment variables from React websites"
   homepage "https://github.com/MillerMedia/Kneejerk"
   url "https://github.com/MillerMedia/Kneejerk/archive/refs/tags/0.0.1.tar.gz"
-  sha256 "cbaa6cf770b5867f4967eac62c2293dfe94e2e18e6a3f3b4131308df42bb51c5"
+  sha256 "507fec4b595bfedee3993349af31c13d517375bccb2c3db79b6a58af75364bde"
 
   depends_on "python@3.9"
 
