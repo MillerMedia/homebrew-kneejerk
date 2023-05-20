@@ -1,4 +1,6 @@
 class Kneejerk < Formula
+  include Language::Python::Virtualenv
+
   desc "A tool for scanning environment variables from React websites"
   homepage "https://github.com/MillerMedia/Kneejerk"
   url "https://github.com/MillerMedia/Kneejerk/archive/refs/tags/0.0.1.tar.gz"
@@ -7,7 +9,13 @@ class Kneejerk < Formula
   depends_on "python@3.9"
 
   def install
-    ENV["SETUPTOOLS_SCM_PRETEND_VERSION"] = version
-    system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(prefix)
+    venv = virtualenv_create(libexec, Formula["python@3.9"].opt_bin/"python3")
+    system libexec/"bin/pip", "install", "-v", "--no-deps", buildpath
+    system libexec/"bin/pip", "uninstall", "-y", "kneejerk"
+    venv.pip_install_and_link buildpath
+  end
+
+  test do
+    assert_match "0.0.1", shell_output("#{bin}/kneejerk --version")
   end
 end
