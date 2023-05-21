@@ -1,9 +1,9 @@
 class Kneejerk < Formula
   desc "A tool for scanning environment variables from React websites"
   homepage "https://github.com/MillerMedia/Kneejerk"
-  url "https://github.com/MillerMedia/Kneejerk/archive/refs/tags/0.1.1.tar.gz"
-  version "0.1.1"
-  sha256 "20e163a5bb9b8a902f6122d77b0f3c03df5b6fab580eb751548085aed19a023e"
+  url "https://github.com/MillerMedia/Kneejerk/archive/refs/tags/0.1.2.tar.gz"
+  version "0.1.2"
+  sha256 "2e53fcd52210685be134fec48022e8a7d798ccb15ecb9756580dab64d1c4f0bc"
 
   depends_on "go" => :build
 
