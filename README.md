@@ -1,6 +1,6 @@
 # Homebrew-Kneejerk
 
-This is the official Homebrew tap for Kneejerk, a Python-based tool for scanning environment variables from React websites.
+This is the official Homebrew tap for Kneejerk, a Go tool for scanning environment variables from React websites.
 
 ## How do I install these formulae?
 
